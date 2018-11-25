@@ -12411,17 +12411,17 @@ module.exports = HDNode
 
 module.exports = {
   bitcoin: {
-    messagePrefix: '\x18Bitcoin Signed Message:\n',
+    messagePrefix: '\x15Veil Signed Message:\n', // 0x15-byte length prefix for Veil
     bip32: {
       public: 0x0488b21e,
       private: 0x0488ade4
     },
-    pubKeyHash: 0x00,
+    pubKeyHash: 0x46, // decimal 70 for V_eil
     scriptHash: 0x05,
     wif: 0x80
   },
   testnet: {
-    messagePrefix: '\x18Bitcoin Signed Message:\n',
+    messagePrefix: '\x15Veil Signed Message:\n', // 0x15-byte length prefix for Veil
     bip32: {
       public: 0x043587cf,
       private: 0x04358394
